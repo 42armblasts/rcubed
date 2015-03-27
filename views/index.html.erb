@@ -63,7 +63,7 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <% @publishers.each do |publisher| %>
-            <li class="active"><a href="#"><%= publisher.name %></a></li>
+            <li class="active"><a href="#" data-publisher=<%= publisher.to_json %>><%= publisher.name %></a></li>
             <% end %>
           </ul>
         </div>
