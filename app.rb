@@ -23,6 +23,18 @@ class SinatraBootstrap < Sinatra::Base
     erb :index
   end
 
+  get '/daily-revenue/:publisher_id.json' do
+    order_scope = Order.where('created_at > ?', Time.now.beginning_of_day).where(publisher_id: params[:publisher_id])
+    earnings_scope = Earning.where('created_at > ?', Time.now.beginning_of_day).where(earner_type: "Publisher", earner_id: params[:publisher_id])
+    order_earnings = order_scope.pluck(:price_in_cents).sum
+
+    {
+      order_count: order_scope.count,
+      total_revenue: order_earnings,
+      net_rev_margin: (order_earnings - earnings_scope.pluck(:amount_in_cents).sum) / (order_earnings == 0 ? 1 : order_earnings)
+    }.to_json
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
