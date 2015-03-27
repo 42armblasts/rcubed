@@ -3,3 +3,4 @@ $('.js-publisher').on 'click', (e) ->
 	publisher = $this.data().publisher
 
 	$('.js-name').html(publisher.name)
+

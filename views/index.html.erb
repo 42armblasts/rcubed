@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
 
-    <title>Project Z (Shhh)</title>
+    <title>R Cubed</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -32,7 +32,22 @@
   </head>
 
   <body>
-
+    
+    <div class="cloak">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 358 336" enable-background="new 0 0 358 336" xml:space="preserve">
+      <path class="logo-path" d="M185.9,159.6L44,88.8l141.9-71.1l141.6,71.1L185.9,159.6z M279.8,206.1l21.3-10.8v21.6L279.8,206.1z M188.3,304.8v-24
+        L306.2,222v-34.8L188.3,246v-82.8l142.2-71.1v141.6L188.3,304.8z M185.9,276.9l-24-12l112.2-56.1l24,12L185.9,276.9z M73.7,162
+        l23.7-12l56.7,28.2v24L73.7,162z M70.4,158.1v-21.6L92,147.3L70.4,158.1z M158.9,260.7v-21l21.6,10.8L158.9,260.7z M70.4,246.3v-51
+        l51,25.5L70.4,246.3z"/>
+        <g id="Layer_2">
+          <path class="logo-path2" fill="#1387B5" d="M155.1,241.8l0.9,0.5V242l28.2,11.8l0-89.5l-29.1-14.1v-0.1l-88.8-44.8v0.1L38.4,90.8v148.8l31.5,17.2
+            v-57.9l53.9,27.1v26.2l29.3,15.3v26.7l30.8,15.2v-27.7l-28.8-15V241.8z M69.9,137.6l85,43.9l0,24.5l-85-42.3V137.6z"/>
+          <path class="logo-path2" fill="#46A9DF" d="M146.1,249.8l0.9,0.5V250l28.2,11.8l0-89.5l-29.1-14.1v-0.1l-88.8-44.8v0.1L29.4,98.8v148.8l31.5,17.2
+            v-57.9l53.9,27.1v26.2l29.3,15.3v26.7l30.8,15.2v-27.7l-28.8-15V249.8z M60.9,145.6l85,43.9l0,24.5l-85-42.3V145.6z"/>
+        </g>
+      </svg>
+    </div>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -42,7 +57,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="/assets/logo-white.svg"/></a>  
+          <a class="navbar-brand" href="#"><img src="/assets/logo-white.svg"/><p>r-cubed</p></a>  
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <!-- <ul class="nav navbar-nav navbar-right">
@@ -63,7 +78,7 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <% @publishers.each do |publisher| %>
-            <li><a href="#" class='js-publisher' data-publisher='<%= publisher.to_json %>'><%= publisher.name %></a></li> <!--.active class for active-->
+            <li class="pub-list"><a href="#" class='js-publisher' data-publisher='<%= publisher.to_json %>'><%= publisher.name %></a></li> <!--.active class for active-->
             <% end %>
           </ul>
         </div>
@@ -73,37 +88,37 @@
               <h1 class="page-header js-name">Publisher</h1>
 
               <div class="row top-five">
-                <div class="col-xs-6 col-sm-4 col-md-3 top-module">
+                <div class="col-xs-5 col-sm-4 col-md-3 top-module">
                   <div class="module-inner">
                     <h4>Day Revenue</h4>
                     <span class="text-muted">$8,467.68</span>
                   </div>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 top-module">
+                <div class="col-xs-5 col-sm-4 col-md-3 top-module">
                   <div class="module-inner">
                     <h4>Live Visitors</h4>
                     <span class="text-muted">109</span>
                   </div>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 top-module">
+                <div class="col-xs-5 col-sm-4 col-md-3 top-module">
                   <div class="module-inner">
                     <h4>CR</h4>
                     <span class="text-muted">2.35%</span>
                   </div>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 top-module">
+                <div class="col-xs-5 col-sm-4 col-md-3 top-module">
                   <div class="module-inner">
                     <h4>PSV</h4>
                     <span class="text-muted">$8.35</span>
                   </div>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 top-module">
+                <div class="col-xs-5 col-sm-4 col-md-3 top-module">
                   <div class="module-inner">
                     <h4>Orders</h4>
                     <span class="text-muted">253</span>
                   </div>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 top-module">
+                <div class="col-xs-5 col-sm-4 col-md-3 top-module">
                   <div class="module-inner">
                     <h4>NRM</h4>
                     <span class="text-muted">34.57%</span>
@@ -244,6 +259,17 @@
         </div>
       </div>
     </div>
+
+    <script>
+
+      $(document).ready(function () {
+        $(".js-publisher").on('click', function () {
+          $('.pub-list').removeClass('active')
+          $(this).parent('.pub-list').toggleClass('active');
+        });  
+      });
+
+    </script>
 
     <script src="/assets/application.js"></script>
   </body>

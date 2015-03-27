@@ -9,6 +9,73 @@ body {
   font-family: "Open Sans";
 }
 
+.cloak {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 5555;
+  -webkit-animation: hide 1.2s 1 ease;
+  -webkit-animation-delay: 2.9s;
+  -webkit-animation-fill-mode: forwards;
+  svg {
+    width: 30vw;
+    margin: 20vh 35vw;
+    // -webkit-animation: hide 3.2s 1 ease;
+    // -webkit-animation-delay: 1.8s;
+    // -webkit-animation-fill-mode: forwards;
+    .logo-path {
+      fill-opacity: 0;
+      stroke: #888;
+      stroke-width: 1;
+      stroke-dasharray: 135;
+      stroke-dashoffset: 135;
+      -webkit-animation: lines 1.4s 1 ease;
+      -webkit-animation-fill-mode: forwards;
+    }
+    .logo-path2 {
+      fill-opacity: 0;
+      stroke: #888;
+      stroke-width: 1;
+      stroke-dasharray: 135;
+      stroke-dashoffset: 135;
+      -webkit-animation: lines 2.3s 1 ease;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+
+/*  Cloak Animations   */
+
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes lines {
+  0% {
+    stroke-dashoffset: 435;
+    fill-opacity: 0;
+  }
+  80% {
+    fill-opacity: 0;
+    stroke-width: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    stroke-width: 0;
+  }
+}
+
 
 /*
  * Global add-ons
@@ -28,8 +95,23 @@ body {
   border: 0;
 }
 
+.navbar-brand {
+  padding: 7px 15px;
+  transition: all 0.25s ease;
+}
+
 .navbar-brand img {
-  
+  width: 40px;
+  float: left;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.navbar-brand p {
+  float: left;
+  display: inline-block;
+  line-height: 36px;
+  font-size: 14px;
 }
 
 /*
@@ -40,6 +122,13 @@ body {
 .sidebar {
   display: none;
 }
+
+.nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, 
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #0bb0ff;
+}
+
 
 @media (min-width: 768px) {
   .sidebar {
@@ -103,10 +192,12 @@ body {
 
 .top-five {
   margin-bottom: 30px;
+  margin-top: 65px;
   text-align: center;
 }
 .top-five h4 {
   margin-bottom: 25px;
+  font-size: 18px;
 }
 .top-module {
   float: none;
@@ -120,7 +211,7 @@ body {
 }
 .module-inner {
   width: 95%;
-  border-bottom: 5px solid green;
+  border-bottom: 5px solid #0bb0ff;
   float: none;
   margin: 0 auto;
   display: inline-block;
@@ -131,4 +222,22 @@ body {
 
 .text-muted {
   font-size: 30px;
+}
+
+@media (min-width: 315px) and (max-width: 767px) {
+  .text-muted {
+    font-size: 16px;
+  }
+  .top-five h4 {
+    font-size: 14px;
+  }
+  .module-inner {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 982px) {
+  .text-muted {
+    font-size: 20px;
+  }
 }
