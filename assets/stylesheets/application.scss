@@ -5,6 +5,8 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
+  background-color: #f7f7f7;
+  font-family: "Open Sans";
 }
 
 
@@ -15,6 +17,7 @@ body {
 .sub-header {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
+  margin-top: 40px;
 }
 
 /*
@@ -33,6 +36,7 @@ body {
 .sidebar {
   display: none;
 }
+
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
@@ -93,13 +97,29 @@ body {
   margin-bottom: 30px;
   text-align: center;
 }
-.placeholders h4 {
-  margin-bottom: 0;
+.top-five h4 {
+  
 }
 .top-module {
-  margin-bottom: 20px;
+  float: none;
+  margin: 0 auto;
+  display: inline-block;
 }
 .top-module img {
   display: inline-block;
   border-radius: 50%;
+}
+.module-inner {
+  width: 95%;
+  border-bottom: 5px solid green;
+  float: none;
+  margin: 0 auto;
+  display: inline-block;
+  padding-bottom: 40px;
+  padding-top: 35px;
+  background-color: white;
+}
+
+.text-muted {
+  font-size: 30px;
 }
