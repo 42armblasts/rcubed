@@ -1,6 +1,5 @@
-require 'rubygems'
 require 'bundler'
-require 'rake'
-Bundler.setup
+require 'sinatra/asset_pipeline/task'
+require './app'
 
-Dir["tasks/*.rake"].sort.each { |ext| load ext }
+Sinatra::AssetPipeline::Task.define! SinatraBootstrap

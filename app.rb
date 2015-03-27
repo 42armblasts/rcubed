@@ -1,6 +1,5 @@
-require 'rubygems'
-require 'sinatra/base'
-require 'mysql2'
+Bundler.require
+
 require 'active_record'
 require 'yaml'
 
@@ -14,10 +13,13 @@ Dir["models/*.rb"].each { |file| load file }
 
 Tilt.register Tilt::ERBTemplate, 'html.erb'
 
+require 'sinatra/asset_pipeline'
+
 class SinatraBootstrap < Sinatra::Base
+  register Sinatra::AssetPipeline
 
   get '/' do
-    @publishers = Publisher.active
+    @publishers = Publisher.active.order(name: :asc)
     erb :index
   end
 
