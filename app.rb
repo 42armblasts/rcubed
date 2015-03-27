@@ -17,6 +17,7 @@ Tilt.register Tilt::ERBTemplate, 'html.erb'
 class SinatraBootstrap < Sinatra::Base
 
   get '/' do
+    @publishers = Publisher.active
     erb :index
   end
 
