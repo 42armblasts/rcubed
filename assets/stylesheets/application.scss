@@ -28,6 +28,10 @@ body {
   border: 0;
 }
 
+.navbar-brand img {
+  
+}
+
 /*
  * Sidebar
  */
@@ -48,8 +52,8 @@ body {
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
-    border-right: 1px solid #eee;
+    background-color: #eee;
+    border-right: 1px solid #ccc;
   }
 }
 
@@ -62,6 +66,10 @@ body {
 .nav-sidebar > li > a {
   padding-right: 20px;
   padding-left: 20px;
+}
+.nav-sidebar > li > a:hover,
+.nav-sidebar > li > a:focus {
+  background-color: #f7f7f7;
 }
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
@@ -98,12 +106,13 @@ body {
   text-align: center;
 }
 .top-five h4 {
-  
+  margin-bottom: 25px;
 }
 .top-module {
   float: none;
   margin: 0 auto;
   display: inline-block;
+  margin-bottom: 25px;
 }
 .top-module img {
   display: inline-block;

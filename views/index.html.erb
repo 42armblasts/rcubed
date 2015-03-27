@@ -42,7 +42,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">r3</a>
+          <a class="navbar-brand" href="#"><img src="/assets/logo-white.svg"/></a>  
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <!-- <ul class="nav navbar-nav navbar-right">
@@ -63,180 +63,184 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <% @publishers.each do |publisher| %>
-            <li><a href="#" data-publisher=<%= publisher.to_json %>><%= publisher.name %></a></li> <!--.active class for active-->
+            <li><a href="#" class='js-publisher' data-publisher='<%= publisher.to_json %>'><%= publisher.name %></a></li> <!--.active class for active-->
             <% end %>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard</h1>
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="page-header js-name">Publisher</h1>
 
-          <div class="row top-five">
-            <div class="col-xs-6 col-sm-2 top-module">
-              <div class="module-inner">
-                <h4>24hr Revenue</h4>
-                <span class="text-muted">$8,467.68</span>
+              <div class="row top-five">
+                <div class="col-xs-6 col-sm-4 col-md-3 top-module">
+                  <div class="module-inner">
+                    <h4>Day Revenue</h4>
+                    <span class="text-muted">$8,467.68</span>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3 top-module">
+                  <div class="module-inner">
+                    <h4>Live Visitors</h4>
+                    <span class="text-muted">109</span>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3 top-module">
+                  <div class="module-inner">
+                    <h4>CR</h4>
+                    <span class="text-muted">2.35%</span>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3 top-module">
+                  <div class="module-inner">
+                    <h4>PSV</h4>
+                    <span class="text-muted">$8.35</span>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3 top-module">
+                  <div class="module-inner">
+                    <h4>Orders</h4>
+                    <span class="text-muted">253</span>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3 top-module">
+                  <div class="module-inner">
+                    <h4>NRM</h4>
+                    <span class="text-muted">34.57%</span>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="col-xs-6 col-sm-2 top-module">
-              <div class="module-inner">
-                <h4>Live Visitors</h4>
-                <span class="text-muted">109</span>
-              </div>
-            </div>
-            <div class="col-xs-6 col-sm-2 top-module">
-              <div class="module-inner">
-                <h4>CR</h4>
-                <span class="text-muted">2.35</span>
-              </div>
-            </div>
-            <div class="col-xs-6 col-sm-2 top-module">
-              <div class="module-inner">
-                <h4>PSV</h4>
-                <span class="text-muted">$8.35</span>
-              </div>
-            </div>
-            <div class="col-xs-6 col-sm-2 top-module">
-              <div class="module-inner">
-                <h4>AOV</h4>
-                <span class="text-muted">$38.12</span>
-              </div>
-            </div>
-            <div class="col-xs-6 col-sm-2 top-module">
-              <div class="module-inner">
-                <h4>NRM</h4>
-                <span class="text-muted">$2,419.68</span>
-              </div>
+
+              <!-- <h2 class="sub-header">Section title</h2>
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Header</th>
+                      <th>Header</th>
+                      <th>Header</th>
+                      <th>Header</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1,001</td>
+                      <td>Lorem</td>
+                      <td>ipsum</td>
+                      <td>dolor</td>
+                      <td>sit</td>
+                    </tr>
+                    <tr>
+                      <td>1,002</td>
+                      <td>amet</td>
+                      <td>consectetur</td>
+                      <td>adipiscing</td>
+                      <td>elit</td>
+                    </tr>
+                    <tr>
+                      <td>1,003</td>
+                      <td>Integer</td>
+                      <td>nec</td>
+                      <td>odio</td>
+                      <td>Praesent</td>
+                    </tr>
+                    <tr>
+                      <td>1,003</td>
+                      <td>libero</td>
+                      <td>Sed</td>
+                      <td>cursus</td>
+                      <td>ante</td>
+                    </tr>
+                    <tr>
+                      <td>1,004</td>
+                      <td>dapibus</td>
+                      <td>diam</td>
+                      <td>Sed</td>
+                      <td>nisi</td>
+                    </tr>
+                    <tr>
+                      <td>1,005</td>
+                      <td>Nulla</td>
+                      <td>quis</td>
+                      <td>sem</td>
+                      <td>at</td>
+                    </tr>
+                    <tr>
+                      <td>1,006</td>
+                      <td>nibh</td>
+                      <td>elementum</td>
+                      <td>imperdiet</td>
+                      <td>Duis</td>
+                    </tr>
+                    <tr>
+                      <td>1,007</td>
+                      <td>sagittis</td>
+                      <td>ipsum</td>
+                      <td>Praesent</td>
+                      <td>mauris</td>
+                    </tr>
+                    <tr>
+                      <td>1,008</td>
+                      <td>Fusce</td>
+                      <td>nec</td>
+                      <td>tellus</td>
+                      <td>sed</td>
+                    </tr>
+                    <tr>
+                      <td>1,009</td>
+                      <td>augue</td>
+                      <td>semper</td>
+                      <td>porta</td>
+                      <td>Mauris</td>
+                    </tr>
+                    <tr>
+                      <td>1,010</td>
+                      <td>massa</td>
+                      <td>Vestibulum</td>
+                      <td>lacinia</td>
+                      <td>arcu</td>
+                    </tr>
+                    <tr>
+                      <td>1,011</td>
+                      <td>eget</td>
+                      <td>nulla</td>
+                      <td>Class</td>
+                      <td>aptent</td>
+                    </tr>
+                    <tr>
+                      <td>1,012</td>
+                      <td>taciti</td>
+                      <td>sociosqu</td>
+                      <td>ad</td>
+                      <td>litora</td>
+                    </tr>
+                    <tr>
+                      <td>1,013</td>
+                      <td>torquent</td>
+                      <td>per</td>
+                      <td>conubia</td>
+                      <td>nostra</td>
+                    </tr>
+                    <tr>
+                      <td>1,014</td>
+                      <td>per</td>
+                      <td>inceptos</td>
+                      <td>himenaeos</td>
+                      <td>Curabitur</td>
+                    </tr>
+                    <tr>
+                      <td>1,015</td>
+                      <td>sodales</td>
+                      <td>ligula</td>
+                      <td>in</td>
+                      <td>libero</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div> -->
             </div>
           </div>
-
-          <!-- <h2 class="sub-header">Section title</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>eget</td>
-                  <td>nulla</td>
-                  <td>Class</td>
-                  <td>aptent</td>
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>taciti</td>
-                  <td>sociosqu</td>
-                  <td>ad</td>
-                  <td>litora</td>
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>torquent</td>
-                  <td>per</td>
-                  <td>conubia</td>
-                  <td>nostra</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                </tr>
-              </tbody>
-            </table>
-          </div> -->
         </div>
       </div>
     </div>
