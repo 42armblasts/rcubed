@@ -17,6 +17,7 @@
 
     <!-- Custom styles for this template -->
     <link href="/assets/application.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -41,10 +42,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">r3</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
+          <!-- <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Settings</a></li>
             <li><a href="#">Profile</a></li>
@@ -52,7 +53,7 @@
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
-          </form>
+          </form> -->
         </div>
       </div>
     </nav>
@@ -62,7 +63,7 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <% @publishers.each do |publisher| %>
-            <li class="active"><a href="#" data-publisher=<%= publisher.to_json %>><%= publisher.name %></a></li>
+            <li><a href="#" data-publisher=<%= publisher.to_json %>><%= publisher.name %></a></li> <!--.active class for active-->
             <% end %>
           </ul>
         </div>
@@ -70,21 +71,27 @@
           <h1 class="page-header">Dashboard</h1>
 
           <div class="row top-five">
-            <div class="col-xs-6 col-sm-3 top-module">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
+            <div class="col-xs-6 col-sm-2 top-module">
+              <div class="module-inner">
+                <h4>24hr Revenue</h4>
+                <span class="text-muted">$8,467.68</span>
+              </div>
             </div>
-            <div class="col-xs-6 col-sm-3 top-module">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
+            <div class="col-xs-6 col-sm-2 top-module">
+              <h4>Live Visitors</h4>
+              <span class="text-muted">109</span>
             </div>
-            <div class="col-xs-6 col-sm-3 top-module">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
+            <div class="col-xs-6 col-sm-2 top-module">
+              <h4>CR</h4>
+              <span class="text-muted">2.35</span>
             </div>
-            <div class="col-xs-6 col-sm-3 top-module">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
+            <div class="col-xs-6 col-sm-2 top-module">
+              <h4>PSV</h4>
+              <span class="text-muted">$8.35</span>
+            </div>
+            <div class="col-xs-6 col-sm-2 top-module">
+              <h4>AOV</h4>
+              <span class="text-muted">$38.12</span>
             </div>
           </div>
 
