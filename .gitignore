@@ -5,6 +5,6 @@ tmp/
 .sass-cache/
 .DS_Store
 dump.rdb
-config/database.yml
+database.yml
 .ruby-*
 .env

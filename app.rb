@@ -1,5 +1,16 @@
 require 'rubygems'
 require 'sinatra/base'
+require 'mysql2'
+require 'active_record'
+require 'yaml'
+
+database_config = if ENV['DATABASE_URL']
+  ENV['DATABASE_URL']
+else
+  YAML.load(File.read('database.yml'))
+end
+ActiveRecord::Base.establish_connection(database_config)
+Dir["models/*.rb"].each { |file| load file }
 
 Tilt.register Tilt::ERBTemplate, 'html.erb'
 

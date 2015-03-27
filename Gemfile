@@ -7,3 +7,6 @@ gem 'rake'
 gem 'shotgun'
 gem 'sass'
 gem 'compass'
+
+gem 'mysql2'
+gem 'activerecord'

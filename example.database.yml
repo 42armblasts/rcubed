@@ -1,0 +1,6 @@
+adapter: mysql2
+encoding: utf8
+database: stack_development
+username: root
+host: localhost
+port: 3306
