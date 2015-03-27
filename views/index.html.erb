@@ -62,8 +62,6 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <% Struct.new("Publisher", :name) %>
-            <% @publishers = (1..10).map { |id| Struct::Publisher.new("Publisher #{id}") } %>
             <% @publishers.each do |publisher| %>
             <li class="active"><a href="#"><%= publisher.name %></a></li>
             <% end %>
