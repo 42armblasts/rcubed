@@ -32,7 +32,7 @@
   </head>
 
   <body>
-    
+
     <div class="cloak">
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
        viewBox="0 0 358 336" enable-background="new 0 0 358 336" xml:space="preserve">
@@ -57,7 +57,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="/assets/logo-white.svg"/><p>r-cubed</p></a>  
+          <a class="navbar-brand" href="#"><img src="/assets/logo-white.svg"/><p>r-cubed</p></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav nav-sidebar hide-for-desktop">
@@ -96,7 +96,7 @@
                 <div class="col-xs-5 col-sm-4 col-md-3 top-module">
                   <div class="module-inner">
                     <h4>Revenue Today</h4>
-                    <span class="text-muted">$8,467.68</span>
+                    <span class="text-muted js-days-revenue">0</span>
                   </div>
                 </div>
                 <div class="col-xs-5 col-sm-4 col-md-3 top-module">
@@ -120,13 +120,13 @@
                 <div class="col-xs-5 col-sm-4 col-md-3 top-module">
                   <div class="module-inner">
                     <h4>Orders</h4>
-                    <span class="text-muted js-order-count"></span>
+                    <span class="text-muted js-order-count">0</span>
                   </div>
                 </div>
                 <div class="col-xs-5 col-sm-4 col-md-3 top-module">
                   <div class="module-inner">
                     <h4>NRM</h4>
-                    <span class="text-muted js-net-rev-margin"></span>
+                    <span class="text-muted js-net-rev-margin">0</span>
                   </div>
                 </div>
               </div>
@@ -271,7 +271,7 @@
         $(".js-publisher").on('click', function () {
           $('.pub-list').removeClass('active')
           $(this).parent('.pub-list').toggleClass('active');
-        });  
+        });
       });
 
     </script>
