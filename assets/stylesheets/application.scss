@@ -76,6 +76,20 @@ body {
   }
 }
 
+/*  Pub animations  */
+
+@-webkit-keyframes right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
 
 /*
  * Global add-ons
@@ -167,6 +181,11 @@ body {
   background-color: #428bca;
 }
 
+.navbar-fixed-bottom .navbar-collapse, 
+.navbar-fixed-top .navbar-collapse {
+  // max-height: 2200px;  need to figure this one out
+}
+
 
 /*
  * Main content
@@ -183,6 +202,11 @@ body {
 }
 .main .page-header {
   margin-top: 0;
+}
+
+.animate-right {
+  -webkit-animation: right 0.5s 1 ease;
+  -webkit-animation-fill-mode: forwards;
 }
 
 
@@ -239,5 +263,11 @@ body {
 @media (min-width: 768px) and (max-width: 982px) {
   .text-muted {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide-for-desktop {
+    display: none;
   }
 }

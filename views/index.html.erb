@@ -60,6 +60,11 @@
           <a class="navbar-brand" href="#"><img src="/assets/logo-white.svg"/><p>r-cubed</p></a>  
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav nav-sidebar hide-for-desktop">
+            <% @publishers.each do |publisher| %>
+            <li class="pub-list"><a href="#" class='js-publisher' data-publisher='<%= publisher.to_json %>'><%= publisher.name %></a></li> <!--.active class for active-->
+            <% end %>
+          </ul>
           <!-- <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Settings</a></li>
@@ -90,7 +95,7 @@
               <div class="row top-five">
                 <div class="col-xs-5 col-sm-4 col-md-3 top-module">
                   <div class="module-inner">
-                    <h4>Day Revenue</h4>
+                    <h4>Revenue Today</h4>
                     <span class="text-muted">$8,467.68</span>
                   </div>
                 </div>
